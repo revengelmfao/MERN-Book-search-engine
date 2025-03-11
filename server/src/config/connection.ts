@@ -3,7 +3,8 @@ dotenv.config();
 
 import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/googlebooks';
+const MONGODB_URI = process.env.MONGODB_URI||'mongodb://127.0.0.1:27017/googlebooks'
+|| 'mongodb+srv://BSantiago_prod:BMnBoBPyGKJtYWfh@cluster0.o9m7l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 const db = async (): Promise<typeof mongoose.connection> => {
   try {
